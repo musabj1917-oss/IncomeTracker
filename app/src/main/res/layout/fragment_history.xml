@@ -16,41 +16,48 @@
         android:textStyle="bold"
         android:layout_marginBottom="14dp"/>
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/filterChipGroup"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/filterRow"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:singleSelection="true"
+        android:orientation="horizontal"
         android:layout_marginBottom="14dp">
 
-        <com.google.android.material.chip.Chip
+        <TextView
             android:id="@+id/chipAll"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="All"
-            android:checked="true"
-            app:chipBackgroundColor="@color/chip_unselected"
-            app:checkedIconVisible="false"/>
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_pill_selected"
+            android:layout_marginEnd="8dp"/>
 
-        <com.google.android.material.chip.Chip
+        <TextView
             android:id="@+id/chipTelebirr"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telebirr"
-            app:chipBackgroundColor="@color/chip_unselected"
-            app:checkedIconVisible="false"/>
+            android:textColor="@color/brown_text"
+            android:textSize="13sp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_pill_stroke"
+            android:layout_marginEnd="8dp"/>
 
-        <com.google.android.material.chip.Chip
+        <TextView
             android:id="@+id/chipCbe"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CBE"
-            app:chipBackgroundColor="@color/chip_unselected"
-            app:checkedIconVisible="false"/>
-    </com.google.android.material.chip.ChipGroup>
+            android:textColor="@color/brown_text"
+            android:textSize="13sp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_pill_stroke"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/historyRecyclerView"

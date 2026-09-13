@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,14 +39,10 @@ class HistoryFragment : Fragment() {
         binding.historyRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.historyRecyclerView.adapter = adapter
 
-        binding.filterChipGroup.setOnCheckedStateChangeListener { _, checkedIds ->
-            currentFilter = when (checkedIds.firstOrNull()) {
-                R.id.chipTelebirr -> "Telebirr"
-                R.id.chipCbe -> "CBE"
-                else -> null
-            }
-            refreshData()
-        }
+        binding.chipAll.setOnClickListener { selectFilter(null) }
+        binding.chipTelebirr.setOnClickListener { selectFilter("Telebirr") }
+        binding.chipCbe.setOnClickListener { selectFilter("CBE") }
+        updatePillStyles()
     }
 
     override fun onResume() {
@@ -65,6 +62,29 @@ class HistoryFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun selectFilter(source: String?) {
+        currentFilter = source
+        updatePillStyles()
+        refreshData()
+    }
+
+    private fun updatePillStyles() {
+        val pills = listOf(null to binding.chipAll, "Telebirr" to binding.chipTelebirr, "CBE" to binding.chipCbe)
+        for ((source, pill) in pills) {
+            setPillSelected(pill, source == currentFilter)
+        }
+    }
+
+    private fun setPillSelected(pill: TextView, selected: Boolean) {
+        if (selected) {
+            pill.setBackgroundResource(R.drawable.bg_pill_selected)
+            pill.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+        } else {
+            pill.setBackgroundResource(R.drawable.bg_pill_stroke)
+            pill.setTextColor(ContextCompat.getColor(requireContext(), R.color.brown_text))
+        }
     }
 
     private fun refreshData() {
