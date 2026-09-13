@@ -4,13 +4,11 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <circle
-        android:cx="54"
-        android:cy="54"
-        android:radius="28"
-        android:fill="#00000000"
+    <path
+        android:fillColor="#00000000"
         android:strokeColor="#D4AF37"
-        android:strokeWidth="6"/>
+        android:strokeWidth="6"
+        android:pathData="M26,54 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0"/>
     <path
         android:fillColor="#D4AF37"
         android:pathData="M50,38 h8 v6 h-8 z"/>
