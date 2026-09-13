@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.IncomeTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryVariant">@color/gold_deep</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gold_bright</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:colorBackground">@color/cream_bg</item>
+        <item name="colorSurface">@color/cream_card</item>
+        <item name="colorOnSurface">@color/brown_text</item>
+        <item name="colorOnBackground">@color/brown_text</item>
+        <item name="android:statusBarColor">@color/cream_bg</item>
+        <item name="android:navigationBarColor">@color/cream_card</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+</resources>

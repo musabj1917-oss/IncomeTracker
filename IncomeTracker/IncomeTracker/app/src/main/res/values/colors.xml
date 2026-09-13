@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warm cream & gold palette, inspired by the Nebiha Arabian Market site -->
+    <color name="cream_bg">#FBF3E4</color>
+    <color name="cream_card">#FFFFFF</color>
+    <color name="cream_card_alt">#FFF8EC</color>
+    <color name="brown_text">#3B2A18</color>
+    <color name="brown_text_soft">#7A6650</color>
+    <color name="gold">#C9962C</color>
+    <color name="gold_bright">#E0AC3F</color>
+    <color name="gold_dim">#E8D2A0</color>
+    <color name="gold_deep">#8A6416</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1A1208</color>
+    <color name="green_income">#3C8A4C</color>
+    <color name="chip_unselected">#F3E6CC</color>
+
+    <!-- kept for any leftover reference -->
+    <color name="near_black">#0D0D0D</color>
+    <color name="surface_dark">#1A1A1A</color>
+    <color name="grey_text">#7A6650</color>
+</resources>
